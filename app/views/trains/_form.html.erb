@@ -16,7 +16,7 @@
     <%= f.label :number , :class => 'right inline' %>
    </div>
    <div class="ten columns">
-    <%= f.number_field :number , :class => 'eight' %>
+    <%= f.number_field :number , :class => 'eight'%>
    </div>
   </div>
   <div class="row">
@@ -67,7 +67,9 @@
     <%= f.number_field :carrier , :class => 'eight' , :placeholder => '1151-PREG, 1251-PKPIC, 1351-SKMT' %>
    </div>
   </div>
-  <div class="actions">
-    <%= f.submit 'Create' , :class => 'button success' %>
+  <div class="row">
+    <div class="actions">
+      <%= f.submit 'Create' , :class => 'button success one' %>
+    </div>
   </div>
 <% end %>
