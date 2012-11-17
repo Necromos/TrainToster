@@ -11,35 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :number %><br />
-    <%= f.number_field :number %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :number , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.number_field :number , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :name , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.text_field :name , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :from %><br />
-    <%= f.text_field :from %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :from , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.text_field :from , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :to %><br />
-    <%= f.text_field :to %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :to , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.text_field :to , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :departure %><br />
-    <%= f.time_select :departure %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :departure , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.time_select :departure , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :arrival %><br />
-    <%= f.time_select :arrival %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :arrival , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.time_select :arrival , :class => 'eight' %>
+   </div>
   </div>
-  <div class="field">
-    <%= f.label :carrier %><br />
-    <%= f.number_field :carrier %>
+  <div class="row">
+   <div class="two columns">
+    <%= f.label :carrier , :class => 'right inline' %>
+   </div>
+   <div class="ten columns">
+    <%= f.number_field :carrier , :class => 'eight' , :placeholder => '1151-PREG, 1251-PKPIC, 1351-SKMT' %>
+   </div>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create' , :class => 'button success' %>
   </div>
 <% end %>
