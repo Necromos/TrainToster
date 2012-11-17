@@ -13,3 +13,9 @@
  *= require_tree .
 */
 @import "foundation";
+
+.custom-top {
+	position: fixed;
+	top: 0px; 
+	width: 100%;
+}
