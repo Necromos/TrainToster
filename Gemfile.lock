@@ -164,6 +164,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
+  execjs
   jquery-rails
   omniauth-facebook
   omniauth-github

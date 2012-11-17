@@ -18,8 +18,7 @@ group :assets do
   gem 'zurb-foundation'
 end
 
-gem 'less-rails', '~> 2.2.6'
-gem 'therubyracer', '~> 0.10.2'
+gem 'execjs'
 gem 'jquery-rails'
 
 # Autoryzacja/Logowanie
