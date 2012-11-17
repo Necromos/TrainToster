@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: 1
+  name: MyString
+  from: MyString
+  to: MyString
+  departure: 2012-11-17 13:05:47
+  arrival: 2012-11-17 13:05:47
+  carrier: 1
+
+two:
+  number: 1
+  name: MyString
+  from: MyString
+  to: MyString
+  departure: 2012-11-17 13:05:47
+  arrival: 2012-11-17 13:05:47
+  carrier: 1
