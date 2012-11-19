@@ -42,7 +42,7 @@
               Welcome, <%= current_user.name %>!</a>
             <ul class="dropdown">  
               <li>
-                <%= link_to "Sign Out", signout_path %>
+                <%= link_to "Sign Out", signout_path, :class => "small round button" %>
               </li>
             </ul>
           <% else %>
@@ -53,9 +53,10 @@
                 <li><%= text_field_tag :auth_key %></li>
                 <li><%= label_tag :password %></li>
                 <li><%= password_field_tag :password %></li>
-                <li><%= submit_tag "Login" %></li>
+                <li><%= submit_tag "Login",  :class => "small round button"  %></li>
                 <li class="divider"></li>
-                <li><label>Don&rsquo;t have an account? <%= link_to "Sign In", new_identity_path %></label></li>
+                <li><label>Don&rsquo;t have an account?</label></li>
+                <li><center><%= link_to "Sign In", new_identity_path, :class => "small radius button" %></center></li>
               <% end %>
             </ul>
           <% end %>
@@ -66,6 +67,6 @@
 	</div>
 
 	<%= yield %>
-  
+
 </body>
 </html>
