@@ -27,43 +27,49 @@
 	<div class="row">
 		<div class="twelve columns">
 			<nav class="top-bar">
-				<ul>
-			        <li class="name">
-			          <h1>
+<ul><li class="name">
 			            <a href="/">
 			              TrainToster
 			            </a>
-			          </h1>
-			        </li>
-		    	</ul>
+
+</li></ul>
+
+<ul class="right">
+  <li class="has-dropdown">
+  <% if current_user %>
+
+    <a href="#">
+      Welcome, <%= current_user.name %>!</a>
+    <ul class="dropdown">  
+      <li>
+<%= link_to "Sign Out", signout_path %>
+      </li>
+    </ul>
+  </li>
+  <% else %>
+
+    <a href="#">You&rsquo;re not logged in.</a>
+    <ul class="dropdown">
+      <%= form_tag "/auth/identity/callback" do %>
+        <li><%= label_tag :auth_key, "Email" %></li>
+        <li><%= text_field_tag :auth_key %></li>
+        <li><%= label_tag :password %></li>
+        <li><%= password_field_tag :password %></li>
+        <li><%= submit_tag "Login" %></li>
+        <li class="divider"></li>
+        <li><label>Don&rsquo;t have an account? <%= link_to "Sign In", new_identity_path %></label>
+      <% end %>
+    </ul>
+
+  <% end %>
+  </li>
+</ul>
 			</nav>
 		</div>
 	</div>
-	<div class="row">
-	<% if current_user %>
-		Welcome, <%= current_user.name %>!
-		<%= link_to "Sign Out", signout_path %>
-	<% else %>
-		<p>
-			<strong>Don&rsquo;t use these services?</strong>
-			<%= link_to "Create an account", new_identity_path %> or login below.
-		</p>
-		  
-		<%= form_tag "/auth/identity/callback" do %>
-			<div class="field">
-				<%= label_tag :auth_key, "Email" %><br>
-				<%= text_field_tag :auth_key %>
-			</div>
-			<div class="field">
-				<%= label_tag :password %><br>
-				<%= password_field_tag :password %>
-			</div>
-			<div class="actions">
-				<%= submit_tag "Login" %>
-			</div>
-		<% end %>
-	<% end %>
-	</div>
+
+
+
 	<%= yield %>
 </body>
 </html>
