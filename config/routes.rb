@@ -2,6 +2,12 @@ TrainToster::Application.routes.draw do
   resources :trains
   root :to => 'trains#index'
 
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+  match "/auth/failure", to: "sessions#failure"
+  match "/logout", to: "sessions#destroy", :as => "logout"
+  resources :identities
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
