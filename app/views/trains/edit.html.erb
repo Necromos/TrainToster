@@ -1,7 +1,10 @@
 <div class="row">
 	<h1>Editing train</h1>
+
+
 </div>
 <%= render 'form' %>
 
-<%= link_to 'Show', @train %> |
-<%= link_to 'Back', trains_path %>
+<div class="row">
+<%= link_to 'Show', @train , :class => 'button' %>
+<%= link_to 'Back', trains_path , :class => 'alert button' %></div>

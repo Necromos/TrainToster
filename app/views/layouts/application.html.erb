@@ -49,14 +49,17 @@
             <a href="#">You&rsquo;re not logged in.</a>
             <ul class="dropdown">
               <%= form_tag "/auth/identity/callback" do %>
+<span class="has-tip tip-left" data-width="100" title="Your email adress used to create an account">
                 <li><%= label_tag :auth_key, "Email" %></li>
-                <li><%= text_field_tag :auth_key %></li>
+                <li><%= text_field_tag :auth_key %></li></span>
+<span class="has-tip tip-left" data-width="100" title="Your password. Remember to not share your password with anyone!">
                 <li><%= label_tag :password %></li>
-                <li><%= password_field_tag :password %></li>
+                <li><%= password_field_tag :password %></li></span>
                 <li><%= submit_tag "Login",  :class => "small round button"  %></li>
                 <li class="divider"></li>
                 <li><label>Don&rsquo;t have an account?</label></li>
-                <li><center><%= link_to "Sign In", new_identity_path, :class => "small radius button" %></center></li>
+<span class="has-tip tip-left" data-width="100" title="If you don't have an account, you can create it here.">
+                <li><center><%= link_to "Sign In", new_identity_path, :class => "small radius button" %></center></li></span>
               <% end %>
             </ul>
           <% end %>

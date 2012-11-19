@@ -1,40 +1,48 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+<div class="row">
+<div class="alert-box"><%= notice %>
+<a href="" class="close">&times;</a>
+</div>
+</div>
+<% end %>
 
-<p>
+<div class="row">
+
   <b>Number:</b>
   <%= @train.number %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>Name:</b>
   <%= @train.name %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>From:</b>
   <%= @train.from %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>To:</b>
   <%= @train.to %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>Departure:</b>
   <%= @train.departure %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>Arrival:</b>
   <%= @train.arrival %>
-</p>
+</div>
 
-<p>
+<div class="row">
   <b>Carrier:</b>
   <%= @train.carrier %>
-</p>
+</div>
 
-
-<%= link_to 'Edit', edit_train_path(@train) %> |
-<%= link_to 'Back', trains_path %>
+<div class="row">
+<%= link_to 'Edit', edit_train_path(@train) , :class => 'button' %>
+<%= link_to 'Back', trains_path , :class => 'button alert' %>
+</div>
