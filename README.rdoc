@@ -22,11 +22,7 @@ dir CHAR NOT NULL  //kierunek
 id_station INT PK UQ NOT NULL
 name VARCHAR(35) NOT NULL  //nazwa, najdłuższa Gdynia Wzgórze św. Maksymiliana się mieści
 dis BOOL NOT NULL  //dostęp dla niepełnosprawnych
-
-[DISTANCE]
-a FK(id_station) NOT NULL
-b FK(id_station) NOT NULL
-km INT NOT NULL
+dst INT NOT NULL  //odleglosc od Slupska
 
 [TIMETABLENOW]
 train FK(id_train) NOT NULL
@@ -47,7 +43,7 @@ hd TIME NOT NULL  //daty świąteczne
 Przykład wywołania:
 
 Od Redy do Gdyni Cisowej o 7:00
--skrypt sprawdza jakiego kierunku szukamy, id Redy > id Cisowej więc szukamy w kierunku Tczewa (Tczew id 0, Sł(( upsk id duże)
+-skrypt sprawdza jakiego kierunku szukamy, id Redy > id Cisowej więc szukamy w kierunku Tczewa (Slupsk id 0, Tczew id duże)
 -sprawdzamy jakich pociągów szukamy (obecna data, czy jest weekend lub święto)
 -szukamy odjeżdżających z Redy około 7:00 takie, dla których istnieje przyjazd do Cisowej i odpowiedni typ mają na TRUE
 
